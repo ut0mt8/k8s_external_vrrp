@@ -90,7 +90,8 @@ func configureServices(services []Service, tmplFile string, configFile string) {
 
 	for n, service := range services {
 		log.Infof("-+= Service #%v", n)
-		log.Infof(" `--== IP : %v", service.IP)
+		log.Infof(" |--== Name : %v", service.Name)
+		log.Infof(" |--== Namespace : %v", service.Namespace)
 		log.Infof(" `--== IP : %v", service.IP)
 	}
 
