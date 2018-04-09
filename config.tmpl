@@ -4,6 +4,6 @@ vrrp_instance vrrp {
   virtual_router_id 42
   priority 101
   virtual_ipaddress_excluded {
-    {{range $i, $svc := .services}}{{$svc.IP}} # {{$svc.Name}}{{end}}
+    {{range $i, $svc := .services}}{{$svc.IP}} # {{$svc.Namespace}}:{{$svc.Name}}{{end}}
   }
 }
